@@ -6,7 +6,7 @@ from mcxToProfile import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument("key", help="Machine Group key")
-parser.add_argument("-u", "--url", help="URL to Sal", default="http://sal")
+parser.add_argument("-u", "--url", help="Server URL to Sal", default="http://sal")
 args = parser.parse_args()
 
 plistDict = dict()
