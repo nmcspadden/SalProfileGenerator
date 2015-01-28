@@ -18,4 +18,8 @@ newPayload = PayloadDict("com.salsoftware.sal", makeNewUUID(), False, "Sal", "Sa
 
 newPayload.addPayloadFromPlistContents(plistDict, 'com.salsoftware.sal', 'Always')
 
-newPayload.finalizeAndSave(os.path.join(os.getcwd(), 'com.salsoftware.sal.mobileconfig'))
+filename = "com.salsoftware.sal"
+
+filename+="." + plistDict['key'][0:5]
+
+newPayload.finalizeAndSave(os.path.join(os.getcwd(), filename + '.mobileconfig'))
