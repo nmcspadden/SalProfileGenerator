@@ -20,7 +20,7 @@ Examples:
 
 `./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb`
 
-`./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb http://sal.domain.com`
+`./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb --url http://sal.domain.com`
 
 Generating all profiles:
 ----
