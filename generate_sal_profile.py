@@ -4,7 +4,8 @@ import argparse
 import os
 from mcxToProfile import *
 
-if not os.getenv("PROFILE_PATH"):
+profile_path = os.getenv("PROFILE_PATH")
+if not profile_path:
 	profile_path="/home/docker/profiles"
 
 parser = argparse.ArgumentParser()
