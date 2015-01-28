@@ -6,5 +6,9 @@ results=$( echo "SELECT key FROM server_machinegroup;" | python /home/docker/sal
 read -rd '' -a lines <<<"$results"
 for line in "${lines[@]}"
 do
-	./generate_sal_profile.py $line
+	if [[ -z $1 ]]; then
+		./generate_sal_profile.py $line
+	else
+		./generate_sal_profile.py $line --url $1
+	fi
 done

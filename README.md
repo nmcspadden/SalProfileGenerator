@@ -27,7 +27,10 @@ Generating all profiles:
 This also includes a handy script for generating profiles for all current machine keys.  Just run the generate_all_profiles.sh script:  
 `./generate_all_profiles.sh`
 
-It will create a com.salsoftware.sal.<key>.mobileconfig, where <key> is the first five characters of the Machine Group key.
+If you wish to generate your profiles using a different URL from the default, pass it in as the shell argument:
+`./generate_all_profiles.sh "http://sal.domain.com"`
+
+It will create a com.salsoftware.sal.\<key\>.mobileconfig, where \<key\> is the first five characters of the Machine Group key.
 
 Example:  
 `./generate_all_profile.sh`    
