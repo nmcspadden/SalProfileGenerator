@@ -10,7 +10,10 @@ import optparse
 import subprocess
 import re
 from uuid import uuid4
-from FoundationPlist import *
+try:
+	from FoundationPlist import *
+except:
+	from plistlib import *
 
 
 class PayloadDict:
