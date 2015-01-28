@@ -4,6 +4,9 @@ import argparse
 import os
 from mcxToProfile import *
 
+if not os.getenv("PROFILE_PATH"):
+	profile_path="/home/docker/profiles"
+
 parser = argparse.ArgumentParser()
 parser.add_argument("key", help="Machine Group key")
 parser.add_argument("-u", "--url", help="Server URL to Sal", default="http://sal")
@@ -22,4 +25,4 @@ filename = "com.salsoftware.sal"
 
 filename+="." + plistDict['key'][0:5]
 
-newPayload.finalizeAndSave(os.path.join(os.getcwd(), filename + '.mobileconfig'))
+newPayload.finalizeAndSave(os.path.join(profile_path, filename + '.mobileconfig'))

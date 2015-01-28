@@ -1,6 +1,9 @@
 #!/bin/bash
 
-default_path="/home/docker/profiles"
+profile_path = printenv PROFILE_PATH
+if [[ ! profile_path ]]; then
+	profile_path="/home/docker/profiles"
+fi
 
 oldIFS="$IFS"
 IFS=$'\n'
@@ -10,8 +13,8 @@ IFS=$oldIFS
 for line in "${lines[@]}"
 do
 	if [[ -z $1 ]]; then
-		$default_path/generate_sal_profile.py $line
+		$profile_path/generate_sal_profile.py $line
 	else
-		$default_path/generate_sal_profile.py $line --url $1
+		$profile_path/generate_sal_profile.py $line --url $1
 	fi
 done
