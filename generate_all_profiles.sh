@@ -13,8 +13,8 @@ IFS=$oldIFS
 for line in "${lines[@]}"
 do
 	if [[ -z $1 ]]; then
-		$profile_path/generate_sal_profile.py $line
+		$profile_path/generate_sal_profile.py $line --output $profile_path
 	else
-		$profile_path/generate_sal_profile.py $line --url $1
+		$profile_path/generate_sal_profile.py $line --url $1 --output $profile_path
 	fi
 done
