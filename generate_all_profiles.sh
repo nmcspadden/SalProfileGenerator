@@ -7,8 +7,8 @@ read -rd '' -a lines <<<"$results"
 for line in "${lines[@]}"
 do
 	if [[ -z $1 ]]; then
-		./generate_sal_profile.py $line
+		"${BASH_SOURCE[0]}"/generate_sal_profile.py $line
 	else
-		./generate_sal_profile.py $line --url $1
+		"${BASH_SOURCE[0]}"/generate_sal_profile.py $line --url $1
 	fi
 done
