@@ -12,7 +12,11 @@ args = parser.parse_args()
 
 plistDict = dict()
 
-plistDict['ServerURL'] = args.url
+if args.url:
+	plistDict['ServerURL'] = args.url
+else:
+	plistDict['ServerURL'] = "http://sal"
+
 plistDict['key'] = args.key
 
 print "args.output: %s" % args.output
