@@ -15,7 +15,11 @@ plistDict = dict()
 plistDict['ServerURL'] = args.url
 plistDict['key'] = args.key
 
+print "args.output: %s" % args.output
+
 output_path = args.output or os.getcwd()
+
+print "output_path: %s" % output_path
 
 newPayload = PayloadDict("com.salsoftware.sal", makeNewUUID(), False, "Sal", "Sal")
 
