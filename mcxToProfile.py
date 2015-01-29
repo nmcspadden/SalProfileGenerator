@@ -127,6 +127,7 @@ class PayloadDict:
         """
         if self.gitrev:
             self.data['PayloadDescription'] += "\nGit revision: %s" % self.gitrev[0:10]
+        print "data: %s" % self.data
         writePlist(self.data, output_path)
 
 

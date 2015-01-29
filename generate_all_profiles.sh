@@ -14,6 +14,7 @@ read -rd '' -a lines <<<"$results"
 IFS=$oldIFS
 for line in "${lines[@]}"
 do
+	echo "Profile path: $profile_path"
 	if [[ -z $1 ]]; then
 		$profile_path/generate_sal_profile.py $line --output $profile_path
 	else
