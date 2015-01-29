@@ -28,7 +28,7 @@ filename = "com.salsoftware.sal"
 filename+="." + plistDict['key'][0:5]
 
 if args.output:
-	if os.path.isdir(args.output):
+	if os.path.isdir(os.path.join(args.output)):
 		output_path = os.path.join(args.output, filename + '.mobileconfig')
 	elif os.path.isfile(args.output):
 		output_path = args.output
