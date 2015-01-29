@@ -2,7 +2,7 @@
 
 profile_path=`printenv PROFILE_PATH`
 if [[ ! profile_path ]]; then
-	profile_path="/home/docker/salprofilegenerator/profiles"
+	profile_path="/home/docker/profiles"
 fi
 
 oldIFS="$IFS"
@@ -13,8 +13,8 @@ IFS=$oldIFS
 for line in "${lines[@]}"
 do
 	if [[ -z $1 ]]; then
-		$profile_path/generate_sal_profile.py $line --output $profile_path
+		/usr/local/salprofilegenerator/generate_sal_profile.py $line --output $profile_path
 	else
-		$profile_path/generate_sal_profile.py $line --url $1 --output $profile_path
+		/usr/local/salprofilegenerator/generate_sal_profile.py $line --url $1 --output $profile_path
 	fi
 done
