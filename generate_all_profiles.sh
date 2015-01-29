@@ -1,7 +1,7 @@
 #!/bin/bash
 
 profile_path=`printenv PROFILE_PATH`
-if [[ ! profile_path ]]; then
+if [[ ! $profile_path ]]; then
 	profile_path="/home/docker/profiles"
 fi
 
