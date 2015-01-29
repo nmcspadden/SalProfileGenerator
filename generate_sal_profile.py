@@ -28,9 +28,9 @@ filename = "com.salsoftware.sal"
 filename+="." + plistDict['key'][0:5]
 
 if args.output:
-	if os.isdir(args.output):
+	if os.path.isdir(args.output):
 		output_path = os.path.join(args.output, filename + '.mobileconfig')
-	elif os.isfile(args.output):
+	elif os.path.isfile(args.output):
 		output_path = args.output
 	else:
 		print "Invalid path. Must be a valid directory or an output file."
