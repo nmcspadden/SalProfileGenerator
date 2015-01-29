@@ -5,7 +5,7 @@ if [[ ! profile_path ]]; then
 	profile_path="/home/docker/profiles"
 fi
 
-print "Profile path: $profile_path"
+echo "Profile path: $profile_path"
 
 oldIFS="$IFS"
 IFS=$'\n'
