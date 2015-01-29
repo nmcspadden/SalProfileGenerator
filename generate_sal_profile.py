@@ -33,7 +33,7 @@ if args.output:
 	elif os.path.isfile(args.output):
 		output_path = args.output
 	else:
-		print "Invalid path. Must be a valid directory or an output file."
+		print "Invalid path: %s. Must be a valid directory or an output file." % args.output
 else:
 	output_path = os.path.join(os.getcwd(), filename + '.mobileconfig')
 
