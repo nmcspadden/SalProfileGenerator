@@ -14,7 +14,7 @@ The Python generate_sal_profile.py script takes the following arguments:
 
 *	`key` - The Machine Group key is **required**, and is generated in Sal by making a new Machine Group within a Business Unit.
 *	`url` - The Server URL is **optional**, and can be specified with either `-u` or `--url`.  The URL defaults to [http://sal](http://sal).
-*	`output` - Output path is **optional**, and can be specified with either `-o` or `--output`.  This can be either a folder to put profiles in, or a specific filename. The default path is `com.salsoftware.sal.mobileconfig` in the current working directory.
+*	`output` - Output path is **optional**, and can be specified with either `-o` or `--output`.  This can be either a folder to put profiles in, or a specific filename. The default path is `com.github.salopensource.sal.mobileconfig` in the current working directory.
 
 `./generate_sal_profile.py <key> --url <URL>`
 
@@ -26,7 +26,7 @@ Examples:
 
 `./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb --url http://sal.domain.com --output ~/Desktop/profiles/`
 
-`./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb --url http://sal.domain.com --output ~/Desktop/profiles/com.salsoftware.sal.MachineGroupA.mobileconfig`
+`./generate_sal_profile.py yym5fuwllm2eaqucxkwzbelji81ewfs5zgxy8qyj5ytzmsheqptpd1u564z0wuv1sqokd8uhi31j2b6wnfv4kasqv4jsmujmv24jiyn8chjt538751mwhia4oyaa5nzb --url http://sal.domain.com --output ~/Desktop/profiles/com.github.salopensource.sal.MachineGroupA.mobileconfig`
 
 Generating all profiles:
 ----
@@ -36,16 +36,16 @@ This also includes a handy script for generating profiles for all current Machin
 If you wish to generate your profiles using a different URL from the default, pass it in as the shell argument:
 `./generate_all_profiles.sh "http://sal.domain.com"`
 
-It will create a com.salsoftware.sal.\<key\>.mobileconfig, where \<key\> is the first five characters of the Machine Group key.
+It will create a com.github.salopensource.sal.\<key\>.mobileconfig, where \<key\> is the first five characters of the Machine Group key.
 
 Example:  
 `./generate_all_profile.sh`    
 Then look:  
-`ls -l | grep com.salsoftware.sal`  
+`ls -l | grep com.github.salopensource.sal`  
 Result:  
-`root@e5c8f459da53:/SalProfileGenerator# ls -l | grep com.salsoftware.sal`  
-`-rw-r--r--. 1 root root  1748 Jan 28 22:10 com.salsoftware.sal.bhan5.mobileconfig`  
-`-rw-r--r--. 1 root root  1748 Jan 28 22:10 com.salsoftware.sal.cf1hg.mobileconfig`
+`root@e5c8f459da53:/SalProfileGenerator# ls -l | grep com.github.salopensource.sal`  
+`-rw-r--r--. 1 root root  1748 Jan 28 22:10 com.github.salopensource.sal.bhan5.mobileconfig`  
+`-rw-r--r--. 1 root root  1748 Jan 28 22:10 com.github.salopensource.sal.cf1hg.mobileconfig`
 
 Using this with Docker:
 ----
